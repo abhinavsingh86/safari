@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WildLifeSafari</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}
+nav{
+    width: 100%;
+    height: 82px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav img{
+    height: 50px;
+}
+.main{
+    width: 100%;
+    height: 170vh;
+    position: relative;
+    overflow: hidden;
+}
+.grey{
+    width: 100%;
+    height:40vh;
+    background-color: rgba(128, 128, 128, 0.4);
+}
+.bigCircle{
+    width: 600px;
+    height: 600px;
+    background-color: red;
+    border-radius: 100%;
+    border: 20px solid #f7743d;
+    background-image: url(https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/rtwe4.jpg);
+    background-size: cover;
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    animation: bigCircle 1.4s linear forwards;
+}
+@keyframes bigCircle{
+    0%{
+        transform: scale(0) rotate(180deg);
+    }
+    100%{
+        transform: scale(1) rotate(0deg);
+    }
+}
+.circle1{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: #f7743d;
+    position: absolute;
+    top: 70px;
+    right: 200px;
+    background-image: url(https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/745e.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: circle1 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}  
+@keyframes circle1{
+    0%{
+        right: -100%;
+        opacity: 0;
+    }
+    100%{
+        right: 700px;
+        opacity: 1;
+    }
+}      
+.circleBlank{
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    background-color: #f7743d;
+    position: absolute;
+    bottom:300px;
+    left: 230px;
+    animation:  circleBlank 1s linear forwards;
+} 
+@keyframes circleBlank{
+    0%{
+        bottom: 200px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 670px;
+        opacity: 1;
+    }
+}  
+.travelBox{
+    width: 450px;
+    height: 450px;
+    background-color:#f7743d;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 100px;
+    right: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: travelbox 1s ease-in forwards;
+}    
+@keyframes travelbox{
+    0%{
+        bottom: 250px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 480px;
+        opacity: 1;
+    }
+}
+.circleBorder{
+    width: 100px;
+    height: 100px;
+    border: 15px solid #f7743d;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 560px;
+    left: 500px;
+    animation: circleBorder 1s ease-in forwards;
+
+}
+ @keyframes circleBorder{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity:1;
+    }
+ }
+ .heading h1{
+    animation:abc 1s ease-in forwards;
+ }
+ @keyframes abc{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+ }
+
+ .main1{
+    width: 100%;
+    height: 200vh;
+    background-color:rgba(128, 128, 128, 0.4) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+ }
+
+.grid{
+    /* width: 370px;
+    height: 300px; */
+    /* background-color: #f7743d; */
+    display: grid;
+    grid-template-columns: repeat(4,230px);
+    grid-template-rows: repeat(2,390px);
+    gap: 10px;
+    
+    position:absolute;
+    top:-200px;
+    animation: grid 1s ease-in forwards;
+    overflow: hidden;
+}
+.innergrids{
+    background-color:#f7743d;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 10px;
+}
+.divlogo{
+    width: 85px;
+    height: 85px;
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes grid{
+    0%{
+        top: 00px;
+        opacity: 0;
+    }
+    100%{
+        top: -200px;
+        opacity: 1;
+    }
+}
+.main1sub{
+    width: 80%;
+    height: 45%;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.left{
+    width: 50%;
+    height: 100%;
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position:relative;
+    animation: left 1s ease-in forwards;
+}
+@keyframes left{
+    0%{
+        left: -200px;
+        opacity: 0;
+    }
+    100%{
+        left: 0px;
+        opacity: 1;
+    }
+}
+.right{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.rightbigcircle{
+    width: 450px;
+    height: 450px;
+    border-radius: 100%;
+    background-image: url(https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/879.jpg);
+    background-size: cover;
+    background-position: -100px;
+    background-repeat: no-repeat;
+    animation: rightbigcircle 1.4s linear forwards;
+}
+@keyframes rightbigcircle{
+    0%{
+        transform: scale(0) rotate(180deg);
+    }
+    100%{
+        transform: scale(1) rotate(0deg);
+    }
+}
+    
+.rightsmallcircle{
+    width: 220px;
+    height: 220px;
+    background-color: antiquewhite;
+    border-radius: 100%;
+    border: 15px solid #f7743d;
+    background-image: url(https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/r67y54.jpg);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -20px;
+    bottom: 120px;
+    animation: rightsmallcircle 1.4s linear 0.4s forwards ;
+    opacity: 0;
+}
+@keyframes rightsmallcircle{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.bigringcircle{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 25px solid #f7743d;
+    position: absolute;
+    top: -45px;
+    right: 170px;
+    animation:bigringcicle 1.4s linear forwards ;
+}
+@keyframes bigringcicle{
+    0%{
+        top: -50px;
+        right: 130px;
+        /* transform: scale(0); */
+       opacity: 0;
+    }
+    100%{
+        top: -45px;
+        right: 170px;
+        opacity: 1;
+    }
+}
+.smallringcircle{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border: 20px solid #f7743d;
+    position: absolute;
+    right:120px;
+    bottom: 170px;
+    animation: smallringcircle 1.5s linear forwards;
+    opacity: 0;
+}
+@keyframes smallringcircle{
+    0%{
+        right: -50px;
+        opacity: 0;
+    }
+    100%{
+        right: 120px;
+        opacity: 1;
+    }
+}
+.smallerringcircle{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 10px solid #f7743d;
+    position: absolute;
+    left: 250px;
+    bottom: 100px;
+    animation:smallerringcircle 1.5s linear  2 forwards;
+}
+@keyframes smallerringcircle{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.main2{
+    width: 100%;
+    height: 80vh;
+    background-color: royalblue;
+    background-image: url(https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/745e.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: black;
+    filter: brightness(0.7);
+    gap: 40px;
+}
+.main2 h1{
+    animation: main2h1 2s ease-in forwards;
+    opacity: 0;
+}
+@keyframes main2h1{
+    0%{
+        transform:scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+.main2 p{
+    animation: main2p 2s ease-in forwards;
+    opacity: 0;
+}
+@keyframes main2p{
+    0%{
+        transform:scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.twobuttons{
+    animation: twobuttons 1.5s linear forwards; 
+}
+@keyframes twobuttons{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.main3{
+    width: 100%;
+    height: 130vh;
+    position: relative;
+}
+.main3bigcircle{
+    width: 700px;
+    height: 700px;
+    background-color: red;
+    border-radius: 100%;
+    border: 20px solid white;
+    background-image: url(https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/73099bc02a9f583392264363/short-haired-blonde-lady-embracing-husband-beach-outdoor-portrait-good-humoured-man-dancing-with-girlfriend-near-ocean_197531-12266.webp);
+    background-size: cover;
+    background-position: -200px;
+    position: absolute;
+    left: 200px;
+    top: 70px;
+    z-index: 1;
+    animation: main3bigcircle 1.5s linear 2 forwards;
+}
+@keyframes main3bigcircle{
+    0%{
+        transform: scale(0) rotate(180deg);
+        
+    }
+    100%{
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.main3darkcircle{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: #fdb698;
+    position: absolute;
+    left: 120px;
+    bottom: 280px;
+    z-index: 1;
+    animation: main3darkcircle 1.5s linear forwards;
+}
+@keyframes main3darkcircle{
+    0%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(180deg);
+    }
+}
+.main3bigringcircle{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: 45px solid #f7743d;
+    position: absolute;
+    top: 15px;
+    right: 550px;
+    z-index: 0;
+    animation: main3bigringcircle 1.5s linear 2 forwards;
+}
+@keyframes main3bigringcircle{
+    0%{
+        top: 10px;
+        right: 500px;
+        opacity: 0;
+    }
+    100%{
+        top: 15px;
+        right: 550px;
+        opacity:1;
+    }
+}
+
+.main3smallringcircle{
+    width: 100px;
+    height: 100px;
+    border: 15px solid #f7743d;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 130px;
+    left: 500px;
+    animation: main3smallringcircle 1s ease-in forwards;
+
+}
+ @keyframes main3smallringcircle{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity:1;
+    }
+ }
+.main3form{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom:10px;
+    left: 300px;
+    z-index: 1;
+    opacity: 0;
+    animation: form-container 2s ease 1.5s forwards;
+  }
+  .form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    background-color:#e0e5eb ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    left: 400px;
+    
+    z-index: 1;
+  }
+  @keyframes form-container{
+    0%{
+     bottom: -100px;
+     opacity: 0;
+    }
+    100%{
+     bottom: 10px;
+     opacity: 1;
+    }
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    height: 50px;
+    background-color:#f7743d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: black;
+    color: white;
+  }
+    </style>
+  </head>
+  <body>
+    <nav>
+        <img src="https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/default-logo.png" alt="">
+        <i style="font-size: 40px;" class="bi bi-list"></i>
+    </nav>
+
+    <div class="main">
+      <div class="grey"></div>
+      <div class="bigCircle"></div>
+      <div class="circle1"></div>
+      <div class="circleBlank"></div>
+      <div class="circleBorder"></div>
+      <div class="travelBox">
+        <h1 style="font-size: 50px">Travel With Us</h1>
+        <p style="font-size: 20px; padding: 20px">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit.
+        </p>
+        <p style="font-size: 20px; padding: 20px">
+          Images from <a href="" style="color: white">Freepik</a>
+        </p>
+        <button
+          style="
+            width: 50%;
+            height: 15%;
+            border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+            background: transparent;
+            border: 2px solid white;
+          "
+        >
+          <h3 style="color: white">Read More</h3>
+        </button>
+      </div>
+      <div class="heading">
+        <h1
+          style="
+            font-size: 50px;
+            position: absolute;
+            bottom: 250px;
+            left: 620px;
+          
+          "
+        >
+          Our Services
+        </h1>
+      </div>
+    </div>
+    <div class="main1">
+      <div class="grid">
+        <div class="innergrids">
+          <div class="divlogo">
+            <img
+              src="https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/9c2bf2e7.png"
+              alt=""
+              width="60px"
+              height="60px"
+            />
+          </div>
+          <h2>Small Groups</h2>
+          <p
+            style="
+              padding: 20px;
+              line-height: 20px;
+              margin-left: 20px;
+              font-size: 18px;
+            "
+          >
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt
+          </p>
+          <a href="" style="color: white; font-size: 20px">More</a>
+        </div>
+        <div class="innergrids">
+          <div class="divlogo">
+            <img
+              src="https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/9c2bf2e7.png"
+              alt=""
+              width="60px"
+              height="60px"
+            />
+          </div>
+          <h2>Small Groups</h2>
+          <p
+            style="
+              padding: 20px;
+              line-height: 20px;
+              margin-left: 20px;
+              font-size: 18px;
+            "
+          >
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt
+          </p>
+          <a href="" style="color: white; font-size: 20px">More</a>
+        </div>
+        <div class="innergrids">
+          <div class="divlogo">
+            <img
+              src="https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/9c2bf2e7.png"
+              alt=""
+              width="60px"
+              height="60px"
+            />
+          </div>
+          <h2>Small Groups</h2>
+          <p
+            style="
+              padding: 20px;
+              line-height: 20px;
+              margin-left: 20px;
+              font-size: 18px;
+            "
+          >
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt
+          </p>
+          <a href="" style="color: white; font-size: 20px">More</a>
+        </div>
+        <div class="innergrids">
+          <div class="divlogo">
+            <img
+              src="https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/9c2bf2e7.png"
+              alt=""
+              width="60px"
+              height="60px"
+            />
+          </div>
+          <h2>Small Groups</h2>
+          <p
+            style="
+              padding: 20px;
+              line-height: 20px;
+              margin-left: 20px;
+              font-size: 18px;
+            "
+          >
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt
+          </p>
+          <a href="" style="color: white; font-size: 20px">More</a>
+        </div>
+        <div class="innergrids">
+          <div class="divlogo">
+            <img
+              src="https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/9c2bf2e7.png"
+              alt=""
+              width="60px"
+              height="60px"
+            />
+          </div>
+          <h2>Small Groups</h2>
+          <p
+            style="
+              padding: 20px;
+              line-height: 20px;
+              margin-left: 20px;
+              font-size: 18px;
+            "
+          >
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt
+          </p>
+          <a href="" style="color: white; font-size: 20px">More</a>
+        </div>
+        <div class="innergrids">
+          <div class="divlogo">
+            <img
+              src="https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/9c2bf2e7.png"
+              alt=""
+              width="60px"
+              height="60px"
+            />
+          </div>
+          <h2>Small Groups</h2>
+          <p
+            style="
+              padding: 20px;
+              line-height: 20px;
+              margin-left: 20px;
+              font-size: 18px;
+            "
+          >
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt
+          </p>
+          <a href="" style="color: white; font-size: 20px">More</a>
+        </div>
+        <div class="innergrids">
+          <div class="divlogo">
+            <img
+              src="https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/9c2bf2e7.png"
+              alt=""
+              width="60px"
+              height="60px"
+            />
+          </div>
+          <h2>Small Groups</h2>
+          <p
+            style="
+              padding: 20px;
+              line-height: 20px;
+              margin-left: 20px;
+              font-size: 18px;
+            "
+          >
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt
+          </p>
+          <a href="" style="color: white; font-size: 20px">More</a>
+        </div>
+        <div class="innergrids">
+          <div class="divlogo">
+            <img
+              src="https://assets.nicepagecdn.com/d2cc3eaa/2235354/images/9c2bf2e7.png"
+              alt=""
+              width="60px"
+              height="60px"
+            />
+          </div>
+          <h2>Small Groups</h2>
+          <p
+            style="
+              padding: 20px;
+              line-height: 20px;
+              margin-left: 20px;
+              font-size: 18px;
+            "
+          >
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt
+          </p>
+          <a href="" style="color: white; font-size: 20px">More</a>
+        </div>
+      </div>
+      <div class="main1sub">
+        <div class="left">
+            <h1 style="font-size: 50px;position: absolute;
+            top: 50px;
+            left: 100px;">Overlanding in <br>Africa</h1>
+            <p style="font-size: 20px;padding-left: 100px;position: absolute;top: 220px;">Morbi tempus iaculis urna id volutpat lacus laoreet. Ornare aenean euismod elementum nisi. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque. Turpis in eu mi bibendum. Fermentum et sollicitudin ac orci phasellus egestas.</p>
+            <p style="font-size: 20px; position: absolute;left: 100px;top: 350px;">Image from <a href="">Freepik</a></p>
+            <button style="background-color:#f7743d ;  height: 50px;width: 200px;border: 2px solid #f7743d;border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+            position: absolute;left: 100px;top: 400px;">
+              <h3 style="color: white;">Read More</h3></button>
+        </div>
+        
+        <div class="right">
+          <div class="rightbigcircle"></div>
+          <div class="rightsmallcircle"></div>
+          <div class="bigringcircle"></div>
+          <div class="smallringcircle"></div>
+          <div class="smallerringcircle"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main2">
+        <h1 style="color: white;font-size: 60px;font-weight: 700;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);">African safari packages and tours
+        </h1>
+        <p style="color: white;font-size: 25px;font-weight: 300;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); padding-left: 310px; padding-right: 280px;">
+          Simple Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus quis elementum.
+        </p>
+        <div class="twobuttons">
+          <button style="width: 200px; height: 50px; background: transparent;
+            border: 2px solid white;border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+            box-shadow:2px 2px 8px rgba(0, 0, 0, 0.4);
+            animation: button1 1.5s linear forwards;"><h2 style="color: white;">Book Now</h2></button>
+          <button style="width: 200px; height: 50px; background-color: white;
+          border: 2px solid white;border-top-right-radius: 40px;
+          border-bottom-right-radius: 40px;
+          border-top-left-radius: 40px;
+          border-bottom-left-radius: 40px;box-shadow:2px 2px 8px rgba(0, 0, 0, 0.4) ;"><h2 style="font-weight: 100;color: black;">All Tours</h2></button>
+        </div>
+    </div>
+    <div class="main3">
+      <div class="main3bigcircle"></div>
+      <div class="main3darkcircle"></div>
+      <div class="main3bigringcircle"></div>
+      <div class="main3smallringcircle"></div>
+      <div class="main3form">
+        <div class="form-container">
+          <h2 style="font-size: 50px;font-weight: 700;">Join Our Newsletter</h2>
+          <form>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+              <label for="Email">Email</label>
+              <input type="email" id="phone" name="phone" placeholder="Enter your phone (e.g. +141555552)" required>
+        
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Enter your message" rows="4" required></textarea>
+        
+              <button type="submit">Submit</button>
+          </form>
+        </div>
+       </div>
+    </div>
+  </body>
+</html>
